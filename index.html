@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMBO INTERNATIONAL HOTEL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. የሆቴሉ ራስጌ (Header) -->
+    <header>
+        <h1>WELCOME TO AMBO INTERNATIONAL HOTEL!</h1>
+        <p>ምርጥ እረፍት እና ጣፋጭ ምግቦች በአንድ ቦታ</p>
+    </header>
+   <img src="download.jpg" alt="Room" class="hotel-img">
+
+
+    <hr>
+
+    <!-- 2. ስለ ሆቴሉ (About) -->
+    <section>
+        <h2>ስለ እኛ</h2>
+        <p>ሆቴላችን ዘመናዊ መኝታ ክፍሎችን፣ የምግብ አዳራሾችን እና ሰፊ የመኪና ማቆሚያን ጨምሮ በታማኝ ሰራተኞች ጥራት ያለው አገልግሎት ይሰጣል።</p>
+    </section>
+
+    <hr>
+
+    <!-- 3. አገልግሎቶች (Services) -->
+    <section>
+        <h2>የምንሰጣቸው አገልግሎቶች</h2>
+        <ul>
+            <li>ዘመናዊ እና ምቹ መኝታ ክፍሎች (Bedrooms)</li>
+            <li>የተለያዩ የሀገር ውስጥ እና የውጭ ምግቦች (Restaurant)</li>
+            <li>ፈጣን የዋይፋይ (Free Wi-Fi) አገልግሎት</li>
+            <li>ትላልቅ የስብሰባ አዳራሾች (Meeting Halls)</li>
+        </ul>
+    </section>
+                <div class="form-group">
+                <label for="days">የመቆያ ቀናት ብዛት፦</label>
+                <input type="number" id="days" min="1" value="1" required>
+            </div>
+
+
+    <hr>
+
+    <!-- 4. አድራሻ (Contact) -->
+    <section>
+            <!-- 4. የክፍሎች ዋጋ ዝርዝር (Pricing Table) -->
+    <section>
+        <h2>የክፍሎች አይነት እና የዋጋ ዝርዝር</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>የክፍል አይነት</th>
+                    <th>አገልግሎቶች</th>
+                    <th>የአንድ ሌሊት ዋጋ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ስታንዳርድ ክፍል (Standard Room)</td>
+                    <td>ነጻ ዋይፋይ፣ አንድ አልጋ፣ ቴሌቪዥን</td>
+                    <td>3,000 ብር</td>
+                </tr>
+                <tr>
+                    <td>ደラックス ክፍል (Deluxe Room)</td>
+                    <td>ሰፊ አልጋ፣ በረንዳ፣ ፍሪጅ፣ ነጻ ዋይፋይ</td>
+                    <td>5,000 ብር</td>
+                </tr>
+                <tr>
+                    <td>ቪአይፒ ስዊት (VIP Suite)</td>
+                    <td>ጃኩዚ፣ ሳሎን ያለው፣ ቪአይፒ አገልግሎት</td>
+                    <td>9,000 ብር</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+        <!-- 5. የመመዝገቢያ ፎርም (Booking Form) -->
+    <section>
+        <h2>ክፍል ያስይዙ (Book a Room)</h2>
+        <form>
+            <div class="form-group">
+                <label for="fullname">ሙሉ ስም፦</label>
+                <input type="text" id="fullname" placeholder="እባክዎ ስምዎን ያስገቡ" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">ስልክ ቁጥር፦</label>
+                <input type="tel" id="phone" placeholder="ለምሳሌ፡ 0911XXXXXX" required>
+            </div>
+
+            <div class="form-group">
+                <label for="room-type">የክፍል አይነት ይምረጡ፦</label>
+                <select id="room-type">
+                    <option value="standard">ስታንዳርድ ክፍል (Standard Room)</option>
+                    <option value="deluxe">ደラックス ክፍል (Deluxe Room)</option>
+                    <option value="vip">ቪአይፒ ስዊት (VIP Suite)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-submit">አሁን አስይዝ</button>
+        </form>
+    </section>
+
+
+        <h2>ያግኙን</h2>
+        <p>📍 አድራሻ: AMBO፣ ETHIOPIA</p>
+        <p>📞 ስልክ: +251 938570399</p>
+    </section>
+    <script src="script.js"></script>
+
+</body>
+</html>
