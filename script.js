@@ -1,12 +1,8 @@
 // 1. FUNCTION (ተግባር) - ሂሳብ የሚያሰላ ክፍል
 function calculateTotalCost(roomPrice, numberOfDays) {
-    // Variable - ንዑስ ድምር
     let subTotal = roomPrice * numberOfDays;
-    // Variable - 15% ታክስ (VAT)
     let tax = subTotal * 0.15;
-    // Variable - ጠቅላላ ድምር
     let total = subTotal + tax;
-    
     return total;
 }
 
@@ -14,12 +10,11 @@ function calculateTotalCost(roomPrice, numberOfDays) {
 document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // 2. VARIABLES (መለዋወጫዎች) - ከፎርሙ መረጃዎችን መሰብሰቢያ
+    // VARIABLES - ከፎርሙ መረጃዎችን መሰብሰቢያ
     let name = document.getElementById('fullname').value;
     let selectedRoom = document.getElementById('room-type').value;
     let daysBooked = document.getElementById('days').value;
     
-    // ሌላ Variable - እንደ ክፍሉ አይነት ዋጋ መወሰኛ
     let pricePerNight = 0;
 
     if (selectedRoom === "standard") {
@@ -30,10 +25,28 @@ document.querySelector('form').addEventListener('submit', function(event) {
         pricePerNight = 9000;
     }
 
-    // 3. FUNCTION መጥራት (Calling the function)
     let finalBill = calculateTotalCost(pricePerNight, daysBooked);
 
-    // መልዕክት ማሳያ
+    // ================= [ አዲስ የዛሬ ኮድ ] =================
+    // የደንበኛውን መረጃ ወደ አንድ ዕቃ (Object) መሰብሰብ
+    let newBooking = {
+        name: name,
+        phone: document.getElementById('phone').value,
+        room: selectedRoom,
+        days: daysBooked
+    };
+
+    // በብሮውዘሩ ሚሞሪ ውስጥ ከበፊቱ የተቀመጡ መረጃዎች ካሉ ማምጣት
+    let currentBookings = JSON.parse(localStorage.getItem('hotelBookings')) || [];
+    
+    // አዲሱን ደንበኛ ወደ ዝርዝሩ መጨመር
+    currentBookings.push(newBooking);
+    
+    // የተሟላውን ዝርዝር መልሶ በብሮውዘሩ ሚሞሪ (LocalStorage) ውስጥ መቆለፍ
+    localStorage.setItem('hotelBookings', JSON.stringify(currentBookings));
+    // ===================================================
+
+    // ለደንበኛው መልዕክት ማሳያ
     alert("እናመሰግናለን " + name + "!\n" + 
           daysBooked + " ቀን ሙሉ በተሳካ ሁኔታ አስይዘዋል።\n" + 
           "የአንድ ሌሊት ዋጋ፡ " + pricePerNight + " ብር\n" + 

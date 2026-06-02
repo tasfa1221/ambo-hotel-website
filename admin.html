@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>አስተዳዳሪ ገጽ - AMBO INTERNATIONAL HOTEL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>የአስተዳዳሪ መቆጣጠሪያ ገጽ (Admin Dashboard)</h1>
+        <p>የደንበኞችን የክፍል ምዝገባ መረጃዎች መቆጣጠሪያ</p>
+        <a href="index.html" style="color: #3498db; font-weight: bold; text-decoration: none;">← ወደ ዋናው ዌብሳይት ተመለስ</a>
+    </header>
+
+    <section>
+        <h2>የመጡ የምዝገባ ጥያቄዎች (Booking Requests)</h2>
+        
+        <!-- የደንበኞች ዝርዝር የሚቀመጥበት ሰንጠረዥ -->
+        <table id="admin-table">
+            <thead>
+                <tr>
+                    <th>የደንበኛ ስም</th>
+                    <th>ስልክ ቁጥር</th>
+                    <th>የክፍል አይነት</th>
+                    <th>የቀናት ብዛት</th>
+                </tr>
+            </thead>
+            <tbody id="booking-list">
+                <!-- የደንበኞች መረጃ በጃቫስክሪፕት አማካኝነት እዚህ ውስጥ በራሱ ይገባል -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ለዛሬው ስራ የሚጠቅመን አዲስ ጃቫስክሪፕት ፋይል -->
+    <script src="admin.js"></script>
+</body>
+</html>
