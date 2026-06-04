@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>የአስተዳዳሪ መግቢያ - AMBO HOTEL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section style="max-width: 400px; margin: 80px auto; padding: 30px;">
+        <h2 style="text-align: center;">የአስተዳዳሪ መግቢያ (Admin Login)</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">የመለያ ስም (Username)፦</label>
+                <input type="text" id="username" placeholder="አስተዳዳሪ" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">ምስጢር ቃል (Password)፦</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="btn-submit" style="background-color: #2c3e50;">ግባ (Login)</button>
+        </form>
+        <p id="error-msg" style="color: red; text-align: center; margin-top: 15px; display: none;">❌ የተሳሳተ የመለያ ስም ወይም ምስጢር ቃል!</p>
+    </section>
+
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,3 +1,10 @@
+// ገጹ ከመከፈቱ በፊት ይህ ያንተ ላፕቶፕ መሆኑን ያረጋግጣል
+let secretKey = localStorage.getItem('my_laptop_secret');
+
+if (secretKey !== 'ambo_verified_2026') {
+    // ያንተ ላፕቶፕ ካልሆነ በቀጥታ ወደ ዋናው ገጽ ያባርረዋል
+    window.location.href = "index.html";
+}
 // ገጹ ሲከፈት በራሱ የሚሰራ ኮድ
 document.addEventListener('DOMContentLoaded', function() {
     let bookingListTable = document.getElementById('booking-list');

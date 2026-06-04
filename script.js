@@ -1,4 +1,6 @@
 // 1. FUNCTION (ተግባር) - ሂሳብ የሚያሰላ ክፍል
+// በአንተ ላፕቶፕ ብሮውዘር ላይ ብቻ የሚቀመጥ ምስጢራዊ መለያ
+localStorage.setItem('my_laptop_secret', 'ambo_verified_2026');
 function calculateTotalCost(roomPrice, numberOfDays) {
     let subTotal = roomPrice * numberOfDays;
     let tax = subTotal * 0.15;
